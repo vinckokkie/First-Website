@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>First Website</title>
+    <link rel="icon" type="image/png" href="/images/icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>My first website:</h1>
+        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In facere illo dolor ipsam laborum eos maiores totam optio neque? Eius fuga amet eveniet sit repellat quae recusandae nesciunt nihil modi!</h3>    
+    </header>
+    
+    <hr>
+
+    <main>
+        <p id="p">This is a paragraph!</p>
+        <hr>
+        
+        <!--This is a comment!-->
+        <a class="a" href="https://www.google.com" target="blank" title="Link for Google!">
+            Link to Google!
+        </a>
+        <br>
+
+        <a class="a" href="page2.html" target="blank" title="Link to page 2!">
+            Link to another page!
+        </a>
+        <br>
+
+        <a class="a" href="mailto:donaldduck@gmail.com" title="Mails to Donald Duck!?">
+            Open mail!?
+        </a>
+        <br><hr>
+
+        <a href="https://en.wikipedia.org/wiki/shrek" target="blank">
+            <img src="/images/shrek.jpg" height="200" alt="Shrek lol!" title="Shrek lol!">
+        </a>
+        <br><hr>
+
+        <audio controls !autoplay muted loop>
+            <source src="/audio/Moonlight in Mexico - Jimena Contreras.mp3">
+            <!--Possibly insert backup audio for if browser doesn't support mp3 audio files!-->
+            This message will display if browser doesn't support any of the above audio types!
+        </audio>
+        <br><hr>
+
+        <video controls !autoplay loop width="400">
+            <source src="/video/random_vid.mp4">
+            <!--Possibly insert backup video for if browser doesn't support mp4 video files!-->
+            This message will display if browser doesn't support any of the above video types!
+        </video>
+        <br><hr>
+
+        <p>This is normal, <b>bold</b>, <i>italic</i>, <big>big</big>, <small>small</small>, <sub>subscript</sub>, <sup>superscript</sup>, <ins>inserted</ins>, <del>deleted</del> <tt>monospaced</tt> and <mark>marked</mark> text!</p>      
+        <hr>
+
+        <p>Unordered list:</p>  
+        <ul>
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Ordered list:
+            <ol>
+                <li>Third item</li>
+                <li>Fourth item</li>
+            </ol>
+            </li>
+            <li>Ordered list:
+            <dl>
+                <dt>First term</dt>
+                <dd>First definition</dd>
+                <dt>Second term</dt>
+                <dd>Second definition</dd>
+            </dl>
+            </li>
+            <li>Ordered list with roman numerals:</li>
+            <ol type="I">
+                <li>Fifth item</li>
+                <li>Sixth item</li>
+            </ol>
+        </ul>
+        <hr>
+
+        <h3>This is a table:</h3>
+        <table>
+            <tr>
+                <th>X</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+            </tr>
+
+            <tr>
+                <td>1</th>
+                <td>1</th>
+                <td>2</th>
+                <td>3</th>
+                <td>4</th>
+            </tr>
+
+            <tr>
+                <td>2</th>
+                <td>2</th>
+                <td>4</th>
+                <td>6</th>
+                <td>8</th>
+            </tr>
+
+            <tr>
+                <td>3</th>
+                <td>3</th>
+                <td>6</th>
+                <td>9</th>
+                <td>12</th>
+            </tr>
+
+            <tr>
+                <td>4</th>
+                <td>4</th>
+                <td>8</th>
+                <td>12</th>
+                <td>16</th>
+            </tr>
+        </table>
+        <hr>
+
+        <h2>BUTTON!?!?</h2>
+        <button id="button" onclick="doSomething()" title="BUTTON!?!?">
+            Click Me!
+        </button>
+        <br><br>
+
+        <a id = "a.button2" href="https://www.google.com" target="_blank">
+            <button id="button2" title="BUTTON!?!?">
+                Google
+            </button>
+        </a>
+        <script>
+            function doSomething() {
+                document.getElementById("button").innerHTML = "Don't Click Me!!"
+                document.getElementById("button2").innerHTML = "Page 2"
+                document.getElementById("a.button2").setAttribute("href", "page2.html")
+            }
+        </script>
+        <br><br><hr>
+
+        <h2>FoRmS:</h2>
+        <form action="index.php" method="post" enctype="multipart/form-data">
+            <label for="firstname" >First name:</label><br>
+            <input class="forminputs" type="text" id="firstname" placeholder="Spongebob" minlength="3" maxlength="20" required>
+            <br><br>
+
+            <label for="password">Password:</label><br>
+            <input class="forminputs" type="password" placeholder="B0b123?" name="password" id="password" minlength="3" maxlength="20" required>
+            <br><br>
+
+            <label for="adress" >Adress:</label><br>
+            <input class="forminputs" type="text" id="adress" placeholder="Pineapple under the Sea" minlength="3" maxlength="20" required>
+            <br><br>
+
+            <label for="E-mail" >E-mail:</label><br>
+            <input class="forminputs" type="email" id="E-mail" placeholder="S.Squarepants@gmail.com" minlength="3" maxlength="20" required>
+            <br><br>
+
+            <label for="number" >Phone number:</label><br>
+            <input class="forminputs" type="tel" id="number" placeholder="012-345-6789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            <br><br>
+
+            <label for="date" >Birth date:</label><br>
+            <input class="forminputs" type="date" id="date" required>
+            <br><br>
+
+            <label for="amount" >Amount:</label><br>
+            <input class="forminputs" type="number" id="amount" value="6969" placeholder="6969" min="4269" max="42069" required>
+            <br><br>
+
+            <label for="title">Title:</label><br>
+            <div id="radiobuttons">
+                <div class="radiobutton">
+                <label for="Mr."> Mr.</label>
+                <input type="radio" id="Mr." name="tile">
+                </div><div class="radiobutton">
+                <label for="Ms."> Ms.</label>
+                <input type="radio" id="Ms." name="tile">
+                </div><div class="radiobutton">
+                <label for="PhD."> PhD.</label>
+                <input type="radio" id="PhD." name="tile">
+                </div>
+            </div>
+            <br>
+
+            <label for="payment">Payment method:</label>
+            <select name="payment" id="payment">
+                <option value="Visa">Visa</option>
+                <option value="Mastercard">Mastercard</option>
+                <option value="Giftcard">Giftcard</option>
+            </select>
+            <br><br>
+
+            <label for="femboy">Julius is femboy:</label>
+            <input type="checkbox" id="femboy" required>
+            <br><br>
+
+            <label for="comment">Comment:</label><br>
+            <textarea name="comment" id="comment"></textarea>
+            <br><br>
+
+            <label for="file">File:</label><br>
+            <input type="file" accept="image/png, image/jpeg">
+            <br><br>
+
+            <label for="slider">Slider:</label><br>
+            <input type="range" name="slider" id="slider" min="0" max="10">
+            <br><br>
+
+            <div class="formbuttons">
+                <input type="reset" id="reset" value="Reset">
+                <input type="submit" id="submit" value="Submit">
+            </div>
+        </form>
+        <br><hr>
+
+        <h2>FoNtS!!!</h2>
+        <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia iure ullam nisi. Vel, a ipsa. Saepe laboriosam ullam id, iste voluptatum ipsam nisi expedita tempore rerum distinctio eaque placeat illo.</p>
+        <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia iure ullam nisi. Vel, a ipsa. Saepe laboriosam ullam id, iste voluptatum ipsam nisi expedita tempore rerum distinctio eaque placeat illo.</p>
+        <p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia iure ullam nisi. Vel, a ipsa. Saepe laboriosam ullam id, iste voluptatum ipsam nisi expedita tempore rerum distinctio eaque placeat illo.</p>
+        <p id="p4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia iure ullam nisi. Vel, a ipsa. Saepe laboriosam ullam id, iste voluptatum ipsam nisi expedita tempore rerum distinctio eaque placeat illo.</p>
+        <p id="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia iure ullam nisi. Vel, a ipsa. Saepe laboriosam ullam id, iste voluptatum ipsam nisi expedita tempore rerum distinctio eaque placeat illo.</p>
+        <p id="p6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia iure ullam nisi. Vel, a ipsa. Saepe laboriosam ullam id, iste voluptatum ipsam nisi expedita tempore rerum distinctio eaque placeat illo.</p>
+        <hr>
+
+        <h1 id="h11">BoRdErS???</h1>
+        <p id="p7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia iure ullam nisi. Vel, a ipsa. Saepe laboriosam ullam id, iste voluptatum ipsam nisi expedita tempore rerum distinctio eaque placeat illo.</p>
+        <hr>
+
+        <h1 id="h12">~~ShAdOwS~~</h1>
+        <div id="box1">Box!</div>
+        <br><hr>
+
+        <h1 id="h13">___MaRgInS___</h1>
+        <div class="box" id="box2">Box 2!</div>
+        <div class="box" id="box3">Box 3!</div>
+        <br><hr>
+
+        <h1 id="h14">~~~~~~~~FLOW~~~~~~~~</h1>
+        <div id="flowbox">
+            <img id="img1" src="images/pokeball.png" height="150px">
+            <h2>Error 404: Title.exe not found!</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti saepe vero facere esse porro quasi hic a quibusdam dolor quis quos vitae eos nesciunt odit obcaecati quidem placeat, itaque corrupti!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro cum consequatur alias dolorum facere, saepe, iste labore ad, nulla repudiandae ipsum! Voluptate nam iusto nesciunt sint. Velit laborum nihil similique.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, qui nihil quo fugiat, illum dolorum neque commodi maiores eos quia aperiam! Esse iusto veritatis delectus expedita aliquam reprehenderit recusandae quidem.</p>
+        </div>
+        <br><hr>
+
+        <h1>Overflow:</h1>
+        <h2 class="Overflowtypes">Visible:</h2>
+        <div class="overflowboxes" id="visible">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam odio tempora libero iusto, ad, doloremque praesentium enim eum repellendus ipsam quas, aliquam est assumenda expedita eveniet sequi. Aliquid, error quaerat.</div>
+        <h2 class="Overflowtypes">Hidden:</h2>
+        <div class="overflowboxes" id="hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat error nesciunt soluta. Dolores magni temporibus, exercitationem sunt voluptate blanditiis quisquam, ullam, inventore aspernatur accusantium corporis! Enim obcaecati veritatis alias laboriosam.</div>
+        <h2 class="Overflowtypes">Clip:</h2>
+        <div class="overflowboxes" id="clip">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam exercitationem, quod nesciunt reprehenderit dicta rem laudantium obcaecati voluptatem laboriosam quasi vitae odit deleniti incidunt aliquam ea, repellat nam neque sequi?</div>
+        <h2 class="Overflowtypes">Scroll:</h2>
+        <div class="overflowboxes" id="scroll">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati quidem provident omnis non. Reprehenderit non ab sapiente vero rerum exercitationem, sunt eaque quo iure dolorem fugiat iusto vitae perspiciatis eos!</div>
+        <h2 class="Overflowtypes">Auto:</h2>
+        <div class="overflowboxes" id="auto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque velit tenetur, vel, tempora porro magni quos officia deserunt repellat recusandae dolores eius consequatur distinctio aliquam quas quae magnam expedita voluptatem.</div>
+        <br><hr>
+
+        <h1 id="h15">::Display::</h1>
+        <h2>Block:</h2>
+        <div class="displayboxes" id="block">A</div><div id="block" class="displayboxes">B</div>
+        <h2>Inline:</h2>
+        <div id="inline" class="displayboxes">A</div><div id="inline" class="displayboxes">B</div>
+        <h2>Inline-block:</h2>
+        <div id="inline-block" class="displayboxes">A</div><div id="inline-block" class="displayboxes">B</div>
+        <br><hr>
+
+        
+
+    </main>
+
+    <hr>
+
+    <footer>
+
+    </footer>
+
+</body>
+</html>
